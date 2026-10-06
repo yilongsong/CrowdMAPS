@@ -63,14 +63,6 @@ a:hover {
   letter-spacing: -0.01em;
 }
 
-.title .name {
-  color: var(--accent);
-}
-
-.title .subtitle b {
-  color: var(--accent);
-}
-
 .authors {
   font-size: 1.2rem;
   line-height: 1.8;
@@ -79,6 +71,11 @@ a:hover {
 .author {
   display: inline-block;
   margin: 0 4px;
+}
+
+.authors a,
+.authors a:hover {
+  color: var(--text);
 }
 
 .affiliation {
