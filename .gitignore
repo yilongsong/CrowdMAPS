@@ -1,0 +1,6 @@
+# Source assets (too large for the repo; web versions live in static/)
+*.zip
+*.mov
+
+.scratch/
+.DS_Store
