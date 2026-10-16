@@ -146,11 +146,15 @@ body {
   text-align: center;
 }
 
-/* Result tables, styled like LaTeX booktabs (\toprule, \midrule, \cmidrule, \bottomrule) */
+/* Result tables, styled like LaTeX booktabs. Every rule is drawn by a single element spanning
+   the table (table border or a full-width rule row), so no browser leaves seams between cells. */
 
 .booktabs {
   margin: 0.5rem auto 1.5rem;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-top: 2px solid #363636;    /* \toprule */
+  border-bottom: 2px solid #363636; /* \bottomrule */
   color: #363636;
   font-size: 0.9rem;
   font-variant-numeric: tabular-nums;
@@ -176,41 +180,30 @@ body {
 }
 
 .booktabs thead tr:first-child > * {
-  border-top: 2px solid #363636;
   padding-top: 0.45em;
-}
-
-.booktabs thead tr:last-child > * {
-  border-bottom: 1px solid #363636;
-  padding-bottom: 0.4em;
-}
-
-.booktabs tbody tr:first-child > *,
-.booktabs tr.midrule > * {
-  padding-top: 0.45em;
-}
-
-.booktabs tr.midrule > * {
-  border-top: 1px solid #363636;
 }
 
 .booktabs tbody tr:last-child > * {
-  border-bottom: 2px solid #363636;
   padding-bottom: 0.45em;
 }
 
-.booktabs .cmid {
-  position: relative;
-  padding-bottom: 0.4em;
+/* Keep sub/superscripts (E_base, Switches^+) from changing row heights and baselines */
+.booktabs sub,
+.booktabs sup {
+  line-height: 0;
 }
 
-.booktabs .cmid::after {
-  content: "";
-  position: absolute;
-  left: 0.4em;
-  right: 0.4em;
-  bottom: 0.1em;
-  border-bottom: 1px solid #363636;
+/* \midrule */
+.booktabs tr.rule > td {
+  height: 0.8em;
+  padding: 0;
+  background: linear-gradient(#363636, #363636) center / 100% 1px no-repeat;
+}
+
+/* \cmidrule(lr) */
+.booktabs th.cmid {
+  padding-bottom: 0.4em;
+  background: linear-gradient(#363636, #363636) center bottom / calc(100% - 0.8em) 1px no-repeat;
 }
 
 .table-caption {
