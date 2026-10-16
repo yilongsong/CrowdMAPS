@@ -146,40 +146,76 @@ body {
   text-align: center;
 }
 
-/* Result tables */
+/* Result tables, styled like LaTeX booktabs (\toprule, \midrule, \cmidrule, \bottomrule) */
 
-.results-table {
-  font-size: 0.85rem;
+.booktabs {
+  margin: 0.5rem auto 1.5rem;
+  border-collapse: collapse;
+  color: #363636;
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
 }
 
-.results-table th,
-.results-table td {
-  text-align: center !important;
+.booktabs th,
+.booktabs td {
+  padding: 0.2em 0.55em;
+  border: none;
+  font-weight: normal;
   vertical-align: middle;
   white-space: nowrap;
 }
 
-.results-table .row-label {
-  text-align: left !important;
+/* :not([align]) outranks Bulma's "table td:not([align]) { text-align: inherit }" reset */
+.booktabs th:not([align]),
+.booktabs td:not([align]) {
+  text-align: center;
 }
 
-.results-table .group-start {
-  border-left: 1px solid #dbdbdb;
+.booktabs .row-label:not([align]) {
+  text-align: left;
 }
 
-.results-table .episodes-row th,
-.results-table .episodes-row td {
-  color: #7a7a7a;
-  font-weight: normal;
+.booktabs thead tr:first-child > * {
+  border-top: 2px solid #363636;
+  padding-top: 0.45em;
 }
 
-.results-table .baseline-row td {
-  border-top: 2px solid #dbdbdb;
-  color: #7a7a7a;
+.booktabs thead tr:last-child > * {
+  border-bottom: 1px solid #363636;
+  padding-bottom: 0.4em;
 }
 
-.trajectory-table .group-top td {
-  border-top: 2px solid #dbdbdb;
+.booktabs tbody tr:first-child > *,
+.booktabs tr.midrule > * {
+  padding-top: 0.45em;
+}
+
+.booktabs tr.midrule > * {
+  border-top: 1px solid #363636;
+}
+
+.booktabs tbody tr:last-child > * {
+  border-bottom: 2px solid #363636;
+  padding-bottom: 0.45em;
+}
+
+.booktabs .cmid {
+  position: relative;
+  padding-bottom: 0.4em;
+}
+
+.booktabs .cmid::after {
+  content: "";
+  position: absolute;
+  left: 0.4em;
+  right: 0.4em;
+  bottom: 0.1em;
+  border-bottom: 1px solid #363636;
+}
+
+.table-caption {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 /* Small screens */

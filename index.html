@@ -42,7 +42,7 @@
               CrowdMAPS<img class="title-icon" src="static/images/map_icon.png" alt="">: Crowdsourcing Multiple
               Actions per State for Real-World Robot Imitation Learning
             </h1>
-            <div class="is-size-5 publication-authors">
+            <div class="is-size-4 publication-authors">
               <span class="author-block">
                 <a href="https://yilongsong.github.io/" target="_blank">Yilong Song</a>,</span>
               <span class="author-block">
@@ -123,9 +123,6 @@
               <source src="static/videos/crowdmaps_intro.mp4" type="video/mp4">
             </video>
           </div>
-          <h2 class="subtitle has-text-centered">
-            Introduction to CrowdMAPS
-          </h2>
         </div>
       </div>
     </div>
@@ -271,22 +268,6 @@
           within a mode and across modes.
         </figcaption>
       </figure>
-
-      <div class="columns is-centered">
-        <div class="column is-three-quarters">
-          <figure class="paper-figure">
-            <a href="static/images/crowdsourcing_stats.png" target="_blank">
-              <img src="static/images/crowdsourcing_stats.png" alt="Submission time distributions, interaction time, and approval rate versus submission number for all five tasks" loading="lazy">
-            </a>
-            <figcaption class="figure-caption">
-              <strong>Crowdsourced annotation statistics</strong> across all five tasks (rows). <strong>Left:</strong>
-              distribution of submission times with median lines. <strong>Center:</strong> median interaction time vs.
-              per-user submission number, with IQR shading. <strong>Right:</strong> approval rate vs. per-user
-              submission number. Drawer only shows quality, since submission times were not recorded.
-            </figcaption>
-          </figure>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -306,64 +287,41 @@
       </div>
 
       <div class="table-container">
-        <table class="table is-narrow is-hoverable is-fullwidth results-table">
+        <table class="booktabs">
           <thead>
             <tr>
-              <th rowspan="2" class="row-label"><i>K</i></th>
-              <th class="group-start">Drawer</th>
-              <th colspan="5" class="group-start">Insertion</th>
-              <th colspan="4" class="group-start">Pouring</th>
-              <th colspan="4" class="group-start">Sorting</th>
-              <th colspan="4" class="group-start">Switches<sup>&minus;</sup></th>
+              <th class="row-label"><i>K</i></th>
+              <th class="cmid">Drawer</th>
+              <th class="cmid" colspan="5">Insertion</th>
+              <th class="cmid" colspan="4">Pouring</th>
+              <th class="cmid" colspan="4">Sorting</th>
+              <th class="cmid" colspan="4">Switches<sup>&minus;</sup></th>
             </tr>
-            <tr class="episodes-row">
-              <th class="group-start">5</th>
-              <th class="group-start">20</th><th>30</th><th>40</th><th>50</th><th>60</th>
-              <th class="group-start">15</th><th>20</th><th>30</th><th>45</th>
-              <th class="group-start">20</th><th>30</th><th>40</th><th>50</th>
-              <th class="group-start">50</th><th>60</th><th>70</th><th>80</th>
+            <tr>
+              <th></th>
+              <th>5</th><th>20</th><th>30</th><th>40</th><th>50</th><th>60</th><th>15</th><th>20</th><th>30</th><th>45</th><th>20</th><th>30</th><th>40</th><th>50</th><th>50</th><th>60</th><th>70</th><th>80</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td class="row-label">1</td>
-              <td class="group-start">12</td>
-              <td class="group-start">8</td><td>36</td><td>68</td><td>72</td><td>76</td>
-              <td class="group-start">28</td><td>32</td><td>56</td><td>92</td>
-              <td class="group-start">8</td><td>20</td><td>28</td><td>36</td>
-              <td class="group-start">24</td><td>24</td><td>36</td><td>40</td>
+              <td>12</td><td>8</td><td>36</td><td>68</td><td>72</td><td>76</td><td>28</td><td>32</td><td>56</td><td>92</td><td>8</td><td>20</td><td>28</td><td>36</td><td>24</td><td>24</td><td>36</td><td>40</td>
             </tr>
             <tr>
               <td class="row-label">2</td>
-              <td class="group-start">52</td>
-              <td class="group-start"><b>16</b></td><td>64</td><td>76</td><td>88</td><td>92</td>
-              <td class="group-start">32</td><td>40</td><td>72</td><td>96</td>
-              <td class="group-start">4</td><td>8</td><td>48</td><td>52</td>
-              <td class="group-start">28</td><td>44</td><td>52</td><td>60</td>
+              <td>52</td><td><b>16</b></td><td>64</td><td>76</td><td>88</td><td>92</td><td>32</td><td>40</td><td>72</td><td>96</td><td>4</td><td>8</td><td>48</td><td>52</td><td>28</td><td>44</td><td>52</td><td>60</td>
             </tr>
             <tr>
               <td class="row-label">5</td>
-              <td class="group-start"><b>76</b></td>
-              <td class="group-start">8</td><td>64</td><td>76</td><td>88</td><td>92</td>
-              <td class="group-start">32</td><td>40</td><td>80</td><td>96</td>
-              <td class="group-start">20</td><td>28</td><td>64</td><td>72</td>
-              <td class="group-start">36</td><td>40</td><td>60</td><td>80</td>
+              <td><b>76</b></td><td>8</td><td>64</td><td>76</td><td>88</td><td>92</td><td>32</td><td>40</td><td>80</td><td>96</td><td>20</td><td>28</td><td>64</td><td>72</td><td>36</td><td>40</td><td>60</td><td>80</td>
             </tr>
             <tr>
               <td class="row-label">10</td>
-              <td class="group-start"><b>76</b></td>
-              <td class="group-start">12</td><td><b>72</b></td><td><b>92</b></td><td><b>96</b></td><td><b>96</b></td>
-              <td class="group-start"><b>56</b></td><td><b>84</b></td><td><b>96</b></td><td><b>100</b></td>
-              <td class="group-start"><b>28</b></td><td><b>40</b></td><td><b>88</b></td><td><b>92</b></td>
-              <td class="group-start"><b>56</b></td><td><b>80</b></td><td><b>84</b></td><td><b>88</b></td>
+              <td><b>76</b></td><td>12</td><td><b>72</b></td><td><b>92</b></td><td><b>96</b></td><td><b>96</b></td><td><b>56</b></td><td><b>84</b></td><td><b>96</b></td><td><b>100</b></td><td><b>28</b></td><td><b>40</b></td><td><b>88</b></td><td><b>92</b></td><td><b>56</b></td><td><b>80</b></td><td><b>84</b></td><td><b>88</b></td>
             </tr>
-            <tr class="baseline-row">
+            <tr class="midrule">
               <td class="row-label">10 (noise)</td>
-              <td class="group-start">4</td>
-              <td class="group-start">12</td><td>68</td><td>88</td><td>68</td><td>52</td>
-              <td class="group-start">32</td><td>16</td><td>52</td><td>80</td>
-              <td class="group-start">0</td><td>8</td><td>60</td><td>24</td>
-              <td class="group-start">40</td><td>56</td><td>52</td><td>68</td>
+              <td>4</td><td>12</td><td>68</td><td>88</td><td>68</td><td>52</td><td>32</td><td>16</td><td>52</td><td>80</td><td>0</td><td>8</td><td>60</td><td>24</td><td>40</td><td>56</td><td>52</td><td>68</td>
             </tr>
           </tbody>
         </table>
@@ -471,29 +429,27 @@
         </p>
       </div>
 
+      <p class="figure-caption table-caption">
+        <strong>Trajectory policy performance under different data augmentation strategies.</strong> All methods start
+        from the base expert demonstrations <i>E</i><sub>base</sub>. We compare adding expert trajectories
+        <i>E</i><sub>added</sub> with adding MAPS data <i>D</i><sub>MAPS</sub> at different widths <i>K</i>. Results
+        are success rates over 25 rollouts, except Switches<sup>+</sup>, which is reported as activated lights out of
+        100. Best results are in bold. Switches<sup>+</sup> requires activating all four lights.
+      </p>
       <div class="table-container">
-        <table class="table is-narrow is-hoverable is-fullwidth results-table trajectory-table">
+        <table class="booktabs">
           <thead>
             <tr>
-              <th class="row-label">Training data</th>
-              <th>Drawer</th>
-              <th>Insertion</th>
-              <th>Pouring</th>
-              <th>Sorting</th>
-              <th>Switches<sup>+</sup></th>
+              <th class="row-label"><b>Training data</b></th>
+              <th><b>Drawer</b></th><th><b>Insertion</b></th><th><b>Pouring</b></th><th><b>Sorting</b></th><th><b>Switches<sup>+</sup></b></th>
             </tr>
           </thead>
           <tbody>
-            <tr class="episodes-row">
-              <td class="row-label">Data sizes: <i>E</i><sub>base</sub> / <i>E</i><sub>added</sub> /
-                <i>D</i><sub>MAPS</sub></td>
-              <td>10 / 5 / 5</td>
-              <td>200 / 100 / 60</td>
-              <td>50 / 50 / 45</td>
-              <td>50 / 50 / 50</td>
-              <td>80 / 80 / 80</td>
+            <tr>
+              <td class="row-label">Data sizes: <i>E</i><sub>base</sub> / <i>E</i><sub>added</sub> / <i>D</i><sub>MAPS</sub></td>
+              <td>10 / 5 / 5</td><td>200 / 100 / 60</td><td>50 / 50 / 45</td><td>50 / 50 / 50</td><td>80 / 80 / 80</td>
             </tr>
-            <tr class="group-top">
+            <tr class="midrule">
               <td class="row-label"><i>E</i><sub>base</sub></td>
               <td>36</td><td>0</td><td>48</td><td>16</td><td>29</td>
             </tr>
@@ -501,7 +457,7 @@
               <td class="row-label"><i>E</i><sub>base</sub> + <i>E</i><sub>added</sub></td>
               <td>56</td><td>24</td><td>80</td><td>52</td><td>54</td>
             </tr>
-            <tr class="group-top">
+            <tr class="midrule">
               <td class="row-label"><i>E</i><sub>base</sub> + <i>D</i><sub>MAPS</sub> (<i>K</i> = 1)</td>
               <td>36</td><td>16</td><td>76</td><td>32</td><td>41</td>
             </tr>
@@ -520,13 +476,6 @@
           </tbody>
         </table>
       </div>
-      <p class="figure-caption">
-        <strong>Trajectory policy performance under different data augmentation strategies.</strong> All methods start
-        from the base expert demonstrations <i>E</i><sub>base</sub>. We compare adding expert trajectories
-        <i>E</i><sub>added</sub> with adding MAPS data <i>D</i><sub>MAPS</sub> at different widths <i>K</i>. Results
-        are success rates over 25 rollouts, except Switches<sup>+</sup>, which is reported as activated lights out of
-        100. Best results are in bold. Switches<sup>+</sup> requires activating all four lights.
-      </p>
     </div>
   </section>
 
