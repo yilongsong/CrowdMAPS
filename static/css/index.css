@@ -4,10 +4,16 @@ body {
   font-family: 'Noto Sans', sans-serif;
 }
 
-.link-block a,
-.link-block button {
+.link-block a {
   margin-top: 5px;
   margin-bottom: 5px;
+}
+
+/* Buttons without a link yet ("Coming Soon") keep the normal dark look. */
+.link-block a.is-coming-soon,
+.link-block a.is-coming-soon:hover {
+  cursor: default;
+  background-color: #363636;
 }
 
 .publication-title {
@@ -19,7 +25,7 @@ body {
 }
 
 .publication-authors a {
-  color: #363636 !important;
+  color: hsl(204, 86%, 53%) !important;
 }
 
 .publication-authors a:hover {
@@ -30,8 +36,9 @@ body {
   display: inline-block;
 }
 
-.publication-venue {
-  margin-top: 0.75rem;
+/* Same as the red highlight line on dex-umi.github.io */
+.publication-award {
+  color: red;
   font-weight: bold;
 }
 
@@ -70,23 +77,6 @@ body {
   margin-bottom: 20px;
 }
 
-.task-video-container {
-  margin-bottom: 60px;
-}
-
-.task-description {
-  margin-bottom: 30px;
-}
-
-.task-description p {
-  margin-bottom: 15px;
-}
-
-.hardware-info {
-  margin-bottom: 25px;
-  font-weight: 500;
-}
-
 /* Figures */
 
 .paper-figure {
@@ -94,25 +84,15 @@ body {
 }
 
 .paper-figure img,
-.task-image,
 .figure-column img {
   display: block;
   width: 100%;
   height: auto;
 }
 
-.task-image {
-  max-width: 720px;
-  margin: 0 auto;
-  border-radius: 6px;
-}
-
 .figure-caption {
   margin-top: 0.75rem;
-  margin-bottom: 2rem;
-  color: #4a4a4a;
-  font-size: 0.95rem;
-  text-align: justify;
+  margin-bottom: 30px;
 }
 
 .figure-row {
@@ -166,12 +146,6 @@ body {
   text-align: center;
 }
 
-/* Stats */
-
-.stats-level {
-  margin: 1.5rem 0 2rem;
-}
-
 /* Result tables */
 
 .results-table {
@@ -208,10 +182,6 @@ body {
   border-top: 2px solid #dbdbdb;
 }
 
-.box pre {
-  overflow-x: auto;
-}
-
 /* Small screens */
 
 @media screen and (max-width: 768px) {
@@ -219,8 +189,7 @@ body {
     font-size: 2rem;
   }
 
-  .content.has-text-justified,
-  .figure-caption {
+  .content.has-text-justified {
     text-align: left !important;
   }
 

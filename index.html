@@ -25,9 +25,9 @@
   <link rel="icon" type="image/png" href="static/images/favicon.png">
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
 </head>
 
@@ -56,28 +56,28 @@
             <div class="is-size-5 publication-authors">
               <span class="author-block">University of Minnesota, Twin Cities</span>
             </div>
-            <p class="is-size-5 publication-venue">Conference on Robot Learning (CoRL) 2026</p>
+            <p class="is-size-5 publication-award">CoRL 2026</p>
 
             <div class="column has-text-centered">
               <div class="publication-links">
-                <!-- Paper PDF link -->
+                <!-- Paper PDF link (add href when available) -->
                 <span class="link-block">
-                  <button class="external-link button is-normal is-rounded is-dark" disabled title="Coming soon">
+                  <a class="external-link button is-normal is-rounded is-dark is-coming-soon" title="Coming soon">
                     <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                     </span>
-                    <span>Paper (coming soon)</span>
-                  </button>
+                    <span>Paper (Coming Soon)</span>
+                  </a>
                 </span>
 
-                <!-- arXiv link -->
+                <!-- arXiv link (add href when available) -->
                 <span class="link-block">
-                  <button class="external-link button is-normal is-rounded is-dark" disabled title="Coming soon">
+                  <a class="external-link button is-normal is-rounded is-dark is-coming-soon" title="Coming soon">
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
                     </span>
-                    <span>arXiv (coming soon)</span>
-                  </button>
+                    <span>arXiv (Coming Soon)</span>
+                  </a>
                 </span>
               </div>
             </div>
@@ -136,7 +136,7 @@
     <div class="container is-max-desktop">
       <h2 class="title is-3 section-title">Method</h2>
 
-      <div class="content has-text-justified">
+      <div class="content">
         <p>
           A single visited robot state often admits several valid next actions: a grasp can be approached from
           slightly different poses, and a multi-step task can be completed in different orders. Standard imitation
@@ -160,7 +160,7 @@
       </figure>
 
       <h4 class="title is-5">Multiple Actions per State (MAPS)</h4>
-      <div class="content has-text-justified">
+      <div class="content">
         <p>
           A standard trajectory pairs each visited observation <i>o<sub>t</sub></i> with one executed action
           <i>a<sub>t</sub></i>. A MAPS dataset keeps exactly the same visited observations but pairs each of them with
@@ -195,7 +195,7 @@
       </p>
 
       <h4 class="title is-5">Web-Based Crowdsourcing</h4>
-      <div class="content has-text-justified">
+      <div class="content">
         <p>CrowdMAPS collects alternative goal poses in two stages:</p>
         <ol>
           <li><strong>State acquisition.</strong> An expert collects standard real-robot trajectories using the same
@@ -226,19 +226,8 @@
         </figcaption>
       </figure>
 
-      <figure class="paper-figure">
-        <a href="static/images/annotation_ui.jpg" target="_blank">
-          <img src="static/images/annotation_ui.jpg" alt="Annotation user interface for the Insertion task" loading="lazy">
-        </a>
-        <figcaption class="figure-caption">
-          <strong>Annotation user interface.</strong> The interface shows a text description of the next keypose,
-          six views, and controls: a red cross that can be dragged to translate the end-effector, and red, blue, and
-          green wheels for rotating it. Annotators can preview a goal pose with <em>Simulate</em> before submitting.
-        </figcaption>
-      </figure>
-
       <h4 class="title is-5">Learning from MAPS Data</h4>
-      <div class="content has-text-justified">
+      <div class="content">
         <ul>
           <li><strong>Keypose policies</strong> predict the next goal pose directly and are supervised on every label
             in each action set. We adapt Diffusion Policy for this setting.</li>
@@ -261,37 +250,10 @@
     <div class="container is-max-desktop">
       <h2 class="title is-3 section-title">Crowdsourcing with Non-Experts</h2>
 
-      <nav class="level stats-level">
-        <div class="level-item has-text-centered">
-          <div>
-            <p class="heading">Participants</p>
-            <p class="title is-4">47</p>
-          </div>
-        </div>
-        <div class="level-item has-text-centered">
-          <div>
-            <p class="heading">No robot-arm experience</p>
-            <p class="title is-4">78.7%</p>
-          </div>
-        </div>
-        <div class="level-item has-text-centered">
-          <div>
-            <p class="heading">Median time per label</p>
-            <p class="title is-4">7&ndash;12 s</p>
-          </div>
-        </div>
-        <div class="level-item has-text-centered">
-          <div>
-            <p class="heading">Acceptance rate</p>
-            <p class="title is-4">51&ndash;98%</p>
-          </div>
-        </div>
-      </nav>
-
-      <div class="content has-text-justified">
+      <div class="content">
         <p>
-          We recruited 47 participants through university mailing lists and social media; most had little to no
-          experience with robotics. Across the four tasks with timing logs, the median submission took 7 to 12
+          We recruited 47 participants through university mailing lists and social media; 78.7% had no prior
+          experience with robot arms. Across the four tasks with timing logs, the median submission took 7 to 12
           seconds, so annotators can contribute in short sessions rather than through sustained teleoperation.
           Submission acceptance rates were 51% for Drawer, 98% for Insertion, 66% for Pouring, 83% for Sorting, and
           94% for Switches, and annotators generally became faster and more accurate with practice.
@@ -328,97 +290,13 @@
     </div>
   </section>
 
-  <!-- Tasks -->
-  <section class="section">
-    <div class="container is-max-desktop">
-      <h2 class="title is-3 section-title">Tasks</h2>
-
-      <div class="content has-text-justified">
-        <p>
-          We evaluate on five real-world manipulation tasks that vary in horizon, precision, and multimodality. Each
-          image below shows the keyframes of one demonstration. Every trained policy is evaluated with 25 real-world
-          rollouts under randomized initializations.
-        </p>
-        <p class="hardware-info">
-          <strong>Hardware:</strong> Trossen WidowX AI arm, with an Intel RealSense D455 front camera and a D405 wrist
-          camera. Expert teleoperation uses a second WidowX AI arm as the leader.
-        </p>
-      </div>
-
-      <div class="task-video-container">
-        <h4 class="title is-5">Drawer</h4>
-        <div class="task-description">
-          <p><strong>Task:</strong> Open the middle drawer, pick up a red cube, place it inside, and push the drawer
-            closed. This combines articulated-object manipulation with pick-and-place.</p>
-          <p class="hardware-info"><strong>Success:</strong> The middle drawer is closed with the red cube inside.
-          </p>
-        </div>
-        <a href="static/images/task_drawer.jpg" target="_blank">
-          <img class="task-image" src="static/images/task_drawer.jpg" alt="Keyframes of a Drawer demonstration" loading="lazy">
-        </a>
-      </div>
-
-      <div class="task-video-container">
-        <h4 class="title is-5">Insertion</h4>
-        <div class="task-description">
-          <p><strong>Task:</strong> Insert a 1&nbsp;cm pole end-effector into a hollow cylinder with a 3&nbsp;cm
-            opening, placed anywhere in a 30&nbsp;cm &times; 70&nbsp;cm region. This requires precise alignment.</p>
-          <p class="hardware-info"><strong>Success:</strong> The end-effector enters the hole without touching the top
-            surface.</p>
-        </div>
-        <a href="static/images/task_insertion.jpg" target="_blank">
-          <img class="task-image" src="static/images/task_insertion.jpg" alt="Keyframes of an Insertion demonstration" loading="lazy">
-        </a>
-      </div>
-
-      <div class="task-video-container">
-        <h4 class="title is-5">Pouring</h4>
-        <div class="task-description">
-          <p><strong>Task:</strong> Grasp a cup holding two dozen nails, carry it to a container, and pour. This
-            requires a specialized transport-and-pour motion.</p>
-          <p class="hardware-info"><strong>Success:</strong> All but at most three nails end up in the container.</p>
-        </div>
-        <a href="static/images/task_pouring.jpg" target="_blank">
-          <img class="task-image" src="static/images/task_pouring.jpg" alt="Keyframes of a Pouring demonstration" loading="lazy">
-        </a>
-      </div>
-
-      <div class="task-video-container">
-        <h4 class="title is-5">Sorting</h4>
-        <div class="task-description">
-          <p><strong>Task:</strong> Place two cubes into the containers of matching color. The task is multimodal
-            because the cubes can be picked in either order.</p>
-          <p class="hardware-info"><strong>Success:</strong> Every cube is inside the container of its color.</p>
-        </div>
-        <a href="static/images/task_sorting.jpg" target="_blank">
-          <img class="task-image" src="static/images/task_sorting.jpg" alt="Keyframes of a Sorting demonstration" loading="lazy">
-        </a>
-      </div>
-
-      <div class="task-video-container">
-        <h4 class="title is-5">Switches</h4>
-        <div class="task-description">
-          <p><strong>Task:</strong> Press four puck lights to turn them all on. The task is multimodal because the
-            lights can be pressed in any order. We use two variants: in Switches<sup>+</sup> all four lights must be
-            activated, and in Switches<sup>&minus;</sup> three lights are already on and the policy presses the
-            remaining one.</p>
-          <p class="hardware-info"><strong>Success:</strong> All four lights are on. For Switches<sup>+</sup> we
-            report the number of activated lights across 25 rollouts, out of 100.</p>
-        </div>
-        <a href="static/images/task_switches.jpg" target="_blank">
-          <img class="task-image" src="static/images/task_switches.jpg" alt="Keyframes of a Switches demonstration" loading="lazy">
-        </a>
-      </div>
-    </div>
-  </section>
-
   <!-- Results -->
   <section class="section">
     <div class="container is-max-desktop">
       <h2 class="title is-3 section-title">Results</h2>
 
       <h4 class="title is-5">Wider MAPS data improves keypose policies</h4>
-      <div class="content has-text-justified">
+      <div class="content">
         <p>
           Averaged across all task and dataset-size settings, increasing width from <i>K</i>&nbsp;=&nbsp;1 to
           <i>K</i>&nbsp;=&nbsp;10 raises success from 38.7% to 74.2%, a gain of 35.6 percentage points. The effect is
@@ -499,12 +377,13 @@
           <strong>Keypose policy performance as MAPS width increases.</strong> Top: success rates (%) for keypose
           policies trained with different MAPS widths <i>K</i>; the numbers under each task are the numbers of
           training trajectories. Bottom: scaling trends for crowdsourced MAPS widths. Each entry is evaluated over 25
-          real-world rollouts with randomized initializations; best results are in bold.
+          real-world rollouts with randomized initializations; best results are in bold. Switches<sup>&minus;</sup>
+          starts with three of the four lights already on.
         </figcaption>
       </figure>
 
       <h4 class="title is-5">Crowdsourced alternatives beat matched Gaussian noise</h4>
-      <div class="content has-text-justified">
+      <div class="content">
         <p>
           The <i>K</i>&nbsp;=&nbsp;10 (noise) row replaces every crowdsourced alternative with a Gaussian perturbation
           of the executed action, with covariance estimated from the crowd annotations themselves. Despite matching
@@ -515,7 +394,7 @@
       </div>
 
       <h4 class="title is-5">Sharper, better-separated action modes</h4>
-      <div class="content has-text-justified">
+      <div class="content">
         <p>
           We sample 100 goal-pose predictions from keypose policies trained with <i>K</i>&nbsp;=&nbsp;1, 2, 5, 10 at
           the same held-out keyframe. On the unimodal Insertion task, wider MAPS data shrinks both the offset and the
@@ -547,7 +426,7 @@
       </p>
 
       <h4 class="title is-5">What drives the gain from wider MAPS?</h4>
-      <div class="content has-text-justified">
+      <div class="content">
         <p>
           MAPS adds action labels only at states the robot already visited, so the gains cannot come from broader
           state coverage. We attribute them to two compounding effects: <strong>within-mode densification</strong>
@@ -577,7 +456,7 @@
       </p>
 
       <h4 class="title is-5">MAPS data transfers to trajectory policies and outperforms more teleoperation</h4>
-      <div class="content has-text-justified">
+      <div class="content">
         <p>
           Starting from a base set of expert demonstrations, we compare adding more expert teleoperated trajectories
           with adding CrowdMAPS data. At <i>K</i>&nbsp;=&nbsp;1, MAPS data often underperforms extra teleoperation,
@@ -646,7 +525,7 @@
         from the base expert demonstrations <i>E</i><sub>base</sub>. We compare adding expert trajectories
         <i>E</i><sub>added</sub> with adding MAPS data <i>D</i><sub>MAPS</sub> at different widths <i>K</i>. Results
         are success rates over 25 rollouts, except Switches<sup>+</sup>, which is reported as activated lights out of
-        100. Best results are in bold.
+        100. Best results are in bold. Switches<sup>+</sup> requires activating all four lights.
       </p>
     </div>
   </section>
@@ -655,20 +534,12 @@
   <section class="section">
     <div class="container is-max-desktop">
       <h2 class="title is-3 section-title">BibTeX</h2>
-      <div class="box">
-        <pre>
-@inproceedings{song2026crowdmaps,
-  title={CrowdMAPS: Crowdsourcing Multiple Actions per State for Real-World Robot Imitation Learning},
-  author={Song, Yilong and Chandirasekar, Harshvardhan and Desingh, Karthik and Zhu-Tian, Chen},
-  booktitle={Conference on Robot Learning},
-  year={2026}
-}</pre>
-      </div>
+      <p class="has-text-centered">Coming soon.</p>
     </div>
   </section>
 
   <footer class="footer">
-    <div class="container">
+    <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column is-8">
           <div class="content">
